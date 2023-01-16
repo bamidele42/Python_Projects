@@ -1,0 +1,40 @@
+https://www.w3schools.com/SQL/TRYSQL.ASP?FILENAME=TRYSQL_SELECT_ALL
+a) How many orders were shipped by Speedy Express in total?
+
+SELECT count(OrderID) Total_order 
+FROM shippers s
+JOIN Orders o
+ON s.ShipperID = o.ShipperID
+WHERE ShipperName= "Speedy Express" 
+
+Answer = 
+Total_order
+54
+
+b) What is the last name of the employee with the most orders?
+
+SELECT e.LastName, d.Quantity FROM Employees e
+JOIN Orders o
+ON e.EmployeeID = o.EmployeeID
+JOIN OrderDetails d
+ON d.OrderID = o.OrderID
+ORDER BY Quantity DESC;
+
+Answer = Fuller	120
+
+
+c) What product was ordered the most by customers in Germany?
+
+SELECT p.ProductName, c.Country, d.Quantity FROM Customers c
+JOIN Orders r
+ON c.CustomerID = r.CustomerID
+JOIN OrderDetails d
+ON r.OrderID = d.OrderID
+JOIN Products p
+ON d.ProductID = p.ProductID
+WHERE c.Country = 'Germany'
+ORDER BY d.Quantity DESC;
+
+Answer = 
+ProductName	Country	Quantity
+Steeleye Stout	Germany	100
