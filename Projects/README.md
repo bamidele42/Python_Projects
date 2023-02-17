@@ -1,7 +1,7 @@
 ### Summary
 ### [View Notebook](https://nbviewer.org/github/bamidele42/Python_Projects/blob/master/Projects/Web_Scraping_project.ipynb)
 
-   ![](newplot.png)
+![](newplot.png)
 
 - The webpage from Goodfirm was successfully accessed and downloaded using Request library.
  - BeautifulSoup was used to locte and extract the details from the downloaded html file
